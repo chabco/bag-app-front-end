@@ -7,10 +7,10 @@ class RegisterForm extends Component {
 			super();
 
 			this.state = {
-					email: '',
-					password: '',
-					username: '',
-					hasAgreed: false
+					email: 'cc@cc.com',
+					username: 'biko',
+					password: '123',
+					hasAgreed: false,
 			};
 
 			this.handleChange = this.handleChange.bind(this);
@@ -29,7 +29,7 @@ class RegisterForm extends Component {
 			});
 		}
 
-		handleSubmit = async (e) => {
+		handleSubmit = (e) => {
 			e.preventDefault();
 
 			let validity = true;
@@ -53,34 +53,33 @@ class RegisterForm extends Component {
 			// 	msg = "Your password must contain at least 1 number"
 			// }
 
+			const userData = {...this.state}
 			if (validity) {
-				const userData = {...this.state}
-				console.log(userData);
-
-				const sendUserData = await axios.post(`${window.apiUrl}/users`, {username: this.props.username}, {headers: {'Accept': 'application/json'}})
+				
+				
+				axios
+				.post(
+					`${window.apiUrl}/users`, {...this.state})
 					.then(response => {
 						console.log(response);
 					})
 					.catch(error => {
 						console.log(error)
 					})
-
-
-				console.log(sendUserData);
-				// const setUpUrl = `${window.apiUrl}/users`
-				// const sendUserData = axios.post(setUpUrl, { userData })
-				// .then(res => {
-				//   console.log(res);
-				//   console.log(res.data);
-				// })
-
-
-			}
-
-			
-
+					// const setUpUrl = `${window.apiUrl}/users`
+					// const sendUserData = axios.post(setUpUrl, { userData })
+					// .then(res => {
+						//   console.log(res);
+						//   console.log(res.data);
+						// })
+						
+						
+					}
+					
+					
+					
 			console.log('The form was submitted with the following data:');
-			console.log(this.state);
+			console.log(userData);
 		}
 
 		render() {
