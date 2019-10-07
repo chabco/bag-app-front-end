@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class LoginForm extends Component {
 		constructor() {
@@ -6,7 +7,8 @@ class LoginForm extends Component {
 
 				this.state = {
 					email: '',
-					password: ''
+					password: '',
+					msg: ''
 				};
 
 				this.handleChange = this.handleChange.bind(this);
@@ -14,21 +16,35 @@ class LoginForm extends Component {
 		}
 
 		handleChange(e) {
-				let target = e.target;
-				let value = target.type === 'checkbox' ? target.checked : target.value;
-				let name = target.name;
+			let target = e.target;
+			let value = target.type === 'checkbox' ? target.checked : target.value;
+			let field = target.name;
 
-				this.setState({
-					[name]: value
-				});
+			this.setState({
+				[field]: value
+			});
 		}
 
 		handleSubmit(e) {
-				e.preventDefault();
+			e.preventDefault();
+			
+			console.log('The form was submitted with the following data:');
+			console.log({...this.state});
 
-				console.log('The form was submitted with the following data:');
-				console.log(this.state);
-		}
+			// ADD VALIDATION (like sign up if(validity) ..etc..) HERE! :)
+
+
+			axios
+			.post(
+				`${window.apiUrl}/users/login`, {...this.state})
+				.then(response => {
+					console.log(response);
+				})
+				.catch(error => {
+					console.log(error)
+				})
+
+		}	
 
 		render() {
 				return (

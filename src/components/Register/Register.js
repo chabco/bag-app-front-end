@@ -33,16 +33,16 @@ class RegisterForm extends Component {
 			e.preventDefault();
 
 			let validity = true;
-			// let msg = '';
+			let msg = '';
 
-			// for (let key in this.state) {
-			// 	if ((this.state[key] < 1) && (key !== 'msg')) {
-			// 		validity = false;
-			// 		msg = `${key} field is required.`
-			// 		console.log(msg);
-			// 		break;
-			// 	}
-			// }
+			for (let key in this.state) {
+				if ((this.state[key] < 1) && (key !== 'msg')) {
+					validity = false;
+					msg = `A ${key} field is required.`
+					console.log(msg);
+					break;
+				}
+			}
 
 			// if (this.state.password.toLowerCase() === this.state.password) {
 			// 	validity = false;
@@ -53,9 +53,10 @@ class RegisterForm extends Component {
 			// 	msg = "Your password must contain at least 1 number"
 			// }
 
-			const userData = {...this.state}
 			if (validity) {
 				
+				console.log('The form was submitted with the following data:');
+				console.log({...this.state});
 				
 				axios
 				.post(
@@ -66,20 +67,9 @@ class RegisterForm extends Component {
 					.catch(error => {
 						console.log(error)
 					})
-					// const setUpUrl = `${window.apiUrl}/users`
-					// const sendUserData = axios.post(setUpUrl, { userData })
-					// .then(res => {
-						//   console.log(res);
-						//   console.log(res.data);
-						// })
 						
 						
-					}
-					
-					
-					
-			console.log('The form was submitted with the following data:');
-			console.log(userData);
+			}	
 		}
 
 		render() {
