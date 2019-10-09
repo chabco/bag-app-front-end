@@ -24,15 +24,6 @@ class App extends Component {
 				users
 			})
 		})
-
-		const allBags = axios.get(`${window.apiUrl}/bags`)
-		allBags.then((resp) => {
-			const bags = resp.data;
-			console.log(bags);
-			this.setState({
-				bags
-			})
-		})
 	}
 
 	buildToggle = () => {
@@ -63,7 +54,7 @@ class App extends Component {
 		{/* <ul>
 			{this.state.users.map(aUser => <li key={aUser.id}>{aUser.username}</li>)}
 		</ul> */}
-		<Grid />
+			<Grid />
 
 
 
@@ -71,11 +62,12 @@ class App extends Component {
 
 		<div className="app-right">
 			{toggleItems}
-
-			<Route exact path="/" component={LoginForm}></Route>
-			<Route path="/register" component={RegisterForm}></Route>
-			<Route exact path="/home" component={Home}></Route>
-			<Route path="/bags" component={Grid}></Route>
+			<Route exact path="/" render={(props)=> {
+				return <LoginForm history={props.history}/>
+			}}/>
+			<Route path="/register" component={RegisterForm}/>
+			<Route exact path="/home" component={Home}/>
+			<Route path="/bags" component={Grid}/>
 		</div>
 		</Router>
 	);

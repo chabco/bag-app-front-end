@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Register.css'
 
 class RegisterForm extends Component {
 		constructor() {

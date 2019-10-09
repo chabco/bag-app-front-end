@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.bags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    background-color: #2E4158;
+    box-shadow: 10px 10px rgba(51, 51, 51, 0.418);
+}
+
+.bags:after {
+    padding-bottom: 100%;
+}
+
+.about {
+    background-color: rgb(62, 134, 228);
+    color: white;
+}
+
+.row .col.l3 {
+    margin: 15px;
+}

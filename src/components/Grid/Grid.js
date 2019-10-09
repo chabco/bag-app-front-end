@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
+import './Grid.css';
 
 class Grid extends Component {
     state = { bags: [] }
@@ -18,14 +20,19 @@ class Grid extends Component {
 
     render() { 
         return ( 
-            <div>
+            <div className="row">
+                <NavLink to="/home" className="about bags col s12 m6 l3">
+                    <div className="bags-content">Hello!</div>
+                </NavLink>
                 {this.state.bags.map(aBag =>
-                <div key={aBag.id} className="row">
-                <div className="col s12 m6 l3">{aBag.name}</div>
-                </div>
-            )}
+                    <NavLink to="/home" key={aBag.id} className="bags col s12 m6 l3">
+                        <div>{aBag.name}</div>
+                    </NavLink>
+                )}
+
+
             </div>
-         );
+        );
     }
 }
  

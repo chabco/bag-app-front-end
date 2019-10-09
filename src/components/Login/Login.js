@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class LoginForm extends Component {
@@ -14,8 +13,8 @@ class LoginForm extends Component {
 
 				this.handleChange = this.handleChange.bind(this);
 				this.handleSubmit = this.handleSubmit.bind(this);
-				this.setRedirect= this.setRedirect.bind(this);
-				this.renderRedirect = this.renderRedirect.bind(this);
+				// this.setRedirect= this.setRedirect.bind(this);
+				// this.renderRedirect = this.renderRedirect.bind(this);
 		}
 
 		handleChange(e) {
@@ -41,28 +40,17 @@ class LoginForm extends Component {
 			.post(
 				`${window.apiUrl}/users/login`, {...this.state})
 				.then(response => {
-					console.log(response);
+					console.log(response.data);
+					localStorage.setItem('data', response.data);
+					this.props.history.push('/home')
 				})
 				.catch(error => {
 					console.log(error)
 				})
-
-		}	
-
-
-		setRedirect = () => {
-			this.setState({
-				redirect: true
-			})
-		}
-
-		renderRedirect = () => {
-			if (this.state.redirect) {
-				return <Redirect to="/home" />
-			}
 		}
 
 		render() {
+			console.log(this.props.history)
 				return (
 				<div className="form-main-container">
 						<form onSubmit={this.handleSubmit} className="form-items">

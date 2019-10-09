@@ -1,0 +1,5 @@
+.form-item-checkbox {
+    position: relative !important;
+    opacity: 1 !important;
+    pointer-events: none;
+}

@@ -11,6 +11,7 @@
 .app-left {
 	width: 50%;
 	background-color: rgb(208, 130, 94);
+	overflow: auto;
 }
   
 .app-right {

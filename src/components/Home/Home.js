@@ -10,7 +10,11 @@ class Home extends Component {
         return ( 
             <div>
                 <Link to="">
-                    <h1>HomePage! You are logged in!</h1>
+                    <h1>Bagay.</h1>
+                    <p>Do you love to travel? Do you love organization? Do you want to make your commute easier?
+
+                        Your bag matters.
+                    </p>
                 </Link>
             </div>
 
