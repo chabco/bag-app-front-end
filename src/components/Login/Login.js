@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class LoginForm extends Component {
@@ -8,11 +9,13 @@ class LoginForm extends Component {
 				this.state = {
 					email: '',
 					password: '',
-					msg: ''
+					redirect: false
 				};
 
 				this.handleChange = this.handleChange.bind(this);
 				this.handleSubmit = this.handleSubmit.bind(this);
+				this.setRedirect= this.setRedirect.bind(this);
+				this.renderRedirect = this.renderRedirect.bind(this);
 		}
 
 		handleChange(e) {
@@ -31,7 +34,7 @@ class LoginForm extends Component {
 			console.log('The form was submitted with the following data:');
 			console.log({...this.state});
 
-			// ADD VALIDATION (like sign up if(validity) ..etc..) HERE! :)
+			// ADD VALIDATION (like sign up if(validity) TOS must be checked ..etc..) HERE! :)
 
 
 			axios
@@ -45,6 +48,19 @@ class LoginForm extends Component {
 				})
 
 		}	
+
+
+		setRedirect = () => {
+			this.setState({
+				redirect: true
+			})
+		}
+
+		renderRedirect = () => {
+			if (this.state.redirect) {
+				return <Redirect to="/home" />
+			}
+		}
 
 		render() {
 				return (
@@ -61,7 +77,7 @@ class LoginForm extends Component {
 							</div>
 
 							<div className="form-item">
-								<button className="form-item-button mr-20">Login</button>	
+								<button className="form-item-button mr-20" onClick={this.setRedirect}>Login</button>	
 							</div>
 						</form>
 					</div>

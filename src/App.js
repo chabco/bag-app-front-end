@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home/Home';
+import StartPage from './components/StartPage/StartPage';
 
 class App extends React.Component {
 
 	render() { 
 		return ( 
-
+			
 			<div className="app">
-				<Home />
+				<StartPage />
 			</div>
 			// <div className="App">
 			//   <h1>Users</h1>

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Register.css';
 
 class RegisterForm extends Component {
 		constructor() {
 			super();
 
 			this.state = {
-					email: 'cc@cc.com',
-					username: 'biko',
-					password: '123',
+					email: '',
+					username: '',
+					password: '',
 					hasAgreed: false,
 			};
 
