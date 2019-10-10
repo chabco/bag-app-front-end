@@ -56,8 +56,9 @@ class Review extends Component {
                 <div className="review-content row">
                     <h1>{name}</h1>
                     <h2>Specifications</h2>
-                    <h3>Volume: {volume_l} L.</h3>
-                    <h3>Weight: {weight_kg} kg.</h3>
+                    <h3>{volume_l} L.</h3>
+                    <h3>{weight_kg} kg.</h3>
+                    <h3>{material}</h3>
                     <p>Dimensions</p>
                     <p>Height: {height_cm} cm. / {height_in} in.</p>
                     <p>Width: {width_cm} cm / {width_in} in.</p>

@@ -29,17 +29,27 @@ class Grid extends Component {
     // }
 
 
+
     render() { 
         const allBags = this.state.bags.map((bag, i) => 
-            <NavLink exact to={`/review/${bag.id}`} key={i} className="bags col s12 m6 l3">
-                <div>{bag.name}</div>
+        <div className="hover col s12 m6 l3">
+            <NavLink exact to={`/review/${bag.id}`} key={i} className="bags" style={{
+                backgroundImage: `url(${bag.image})`,
+                backgroundPosition: 'center',
+                // backgroundSize: 'cover',
+                }}>
+                    {/* <img className="grid-image" alt="" src={`${bag.image}`}/> */}
+                <div className="bags-content">
+                    <div className="bags-name">{bag.name}</div>
+                </div>
             </NavLink>
+            </div>
         )
         console.log(this)
         return ( 
             <div className="row">
                 <NavLink exact to="/home" className="about bags col s12 m6 l3">
-                    <div className="bags-content">Hello!</div>
+                    <div className="bags-content">Bagay.</div>
                 </NavLink>
                 {allBags}
             </div>

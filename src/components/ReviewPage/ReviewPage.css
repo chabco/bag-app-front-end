@@ -16,3 +16,8 @@ h1 {
 h2 {
     font-size: 1.7rem;
 }
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Staatliches', cursive;
+}

@@ -19,8 +19,23 @@
     background-color: rgb(119, 228, 161);
 }
 
-.bags:after {
-    padding-bottom: 100%;
+.bags-name {
+    font-size: 130%;
+    margin: 5px;
+}
+
+.bags-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hover {
+    z-index: 2;
+}
+
+.hover:hover {
+    background-color: rgb(119, 228, 161); 
 }
 
 .about {
@@ -28,6 +43,10 @@
     color: white;
 }
 
-.row .col.l3 {
-    margin: 15px;
+.about, .col.l3 {
+    margin: 15px !important;
+}
+
+.row .col {
+    padding: 0;
 }
