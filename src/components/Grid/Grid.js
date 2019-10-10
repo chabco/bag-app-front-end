@@ -4,10 +4,15 @@ import { NavLink } from 'react-router-dom';
 import './Grid.css';
 
 class Grid extends Component {
-    state = { bags: [] }
+    constructor(props) {
+        super();
+        this.state = { bags: [] }
+    }
 
     componentDidMount = () => {
-        const allBags = axios.get(`${window.apiUrl}/bags`)
+        // const bagId = this.props.match.params.bagId
+        // console.log(bagId)
+        const allBags = axios.get(`${window.apiUrl}/bags/`)
 		allBags.then((resp) => {
 			const bags = resp.data;
 			console.log(bags);
@@ -17,20 +22,26 @@ class Grid extends Component {
 		})
     }
 
+    // componentDidUpdate = () => {
+    //     this.setState({
+    //         bags: resp.data
+    //     })
+    // }
+
 
     render() { 
+        const allBags = this.state.bags.map((bag, i) => 
+            <NavLink exact to={`/review/${bag.id}`} key={i} className="bags col s12 m6 l3">
+                <div>{bag.name}</div>
+            </NavLink>
+        )
+        console.log(this)
         return ( 
             <div className="row">
-                <NavLink to="/home" className="about bags col s12 m6 l3">
+                <NavLink exact to="/home" className="about bags col s12 m6 l3">
                     <div className="bags-content">Hello!</div>
                 </NavLink>
-                {this.state.bags.map(aBag =>
-                    <NavLink to="/home" key={aBag.id} className="bags col s12 m6 l3">
-                        <div>{aBag.name}</div>
-                    </NavLink>
-                )}
-
-
+                {allBags}
             </div>
         );
     }

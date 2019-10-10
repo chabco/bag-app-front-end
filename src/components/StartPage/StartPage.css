@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap');
+
 :root {
 	background-color: black;
 }
@@ -6,6 +8,7 @@
 	height: 100vh;
 	display: flex;
 	color: white;
+	font-family: 'Montserrat', sans-serif;
 }
   
 .app-left {

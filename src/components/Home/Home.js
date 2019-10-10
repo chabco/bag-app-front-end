@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 
 // INCLUDE ABOUT HERE AND RERENDER TO BAG INFO ON GRID CLICK!
@@ -9,13 +8,14 @@ class Home extends Component {
     render() { 
         return ( 
             <div>
-                <Link to="">
-                    <h1>Bagay.</h1>
-                    <p>Do you love to travel? Do you love organization? Do you want to make your commute easier?
+                
+                <h1>Bagay.</h1>
+                <h2>Do you love to travel?</h2>
+                <h2>Do you love organization?</h2>
+                <h2>Do you want to make your commute easier?</h2>
 
-                        Your bag matters.
-                    </p>
-                </Link>
+                <h2>Your bag matters.</h2>
+                
             </div>
 
         );
