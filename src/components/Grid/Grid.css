@@ -13,15 +13,22 @@
     background-color: #2E4158;
     box-shadow: 10px 10px rgba(51, 51, 51, 0.418);
     color: white;
+    border-radius: 10px 10px 0 10px;
 }
 
 .bags:hover {
-    background-color: rgb(119, 228, 161);
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 .bags-name {
     font-size: 130%;
     margin: 5px;
+}
+
+.home-name {
+    font-size: 400%;
+    margin: 5px;
+    font-family: 'Staatliches', cursive;
 }
 
 .bags-content {
@@ -35,7 +42,7 @@
 }
 
 .hover:hover {
-    background-color: rgb(119, 228, 161); 
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 .about {

@@ -49,7 +49,7 @@ class Grid extends Component {
         return ( 
             <div className="row">
                 <NavLink exact to="/home" className="about bags col s12 m6 l3">
-                    <div className="bags-content">Bagay.</div>
+                    <div className="bags-content"><div className="home-name">Bagay.</div></div>
                 </NavLink>
                 {allBags}
             </div>
