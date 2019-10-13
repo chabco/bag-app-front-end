@@ -40,7 +40,7 @@ class Grid extends Component {
                 }}>
                     {/* <img className="grid-image" alt="" src={`${bag.image}`}/> */}
                 <div className="bags-content">
-                    <div className="bags-name">{bag.name}</div>
+                    <div className="bags-name">{bag.name}<div>{bag.volume_l} L</div></div>
                 </div>
             </NavLink>
             </div>

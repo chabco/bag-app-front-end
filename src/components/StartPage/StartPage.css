@@ -13,13 +13,15 @@
   
 .app-left {
 	width: 50%;
-	background-color: rgb(208, 130, 94);
+	/* background-color: rgb(208, 130, 94); */
+	background: linear-gradient(rgb(208, 130, 94), rgb(179, 93, 54));
 	overflow: auto;
 }
   
 .app-right {
 	width: 50%;
-	background-color: #2E4158;
+	/* background-color: #2E4158; */
+	background: linear-gradient(#2E4158, #111111);
 	padding: 25px 40px;
 	overflow: auto;
 }
@@ -40,6 +42,7 @@
 	outline: none;
 	display: inline-block;
 	text-decoration: none;
+    box-shadow: 10px 10px rgba(51, 51, 51, 0.418);
 }
   
 .toggle-item-active {
@@ -54,7 +57,7 @@
 
 .toggle-item:last-child {
 	border-top-right-radius: 25px;
-	border-bottom-right-radius: 25px;
+	/* border-bottom-right-radius: 25px; */
 }
   
 .form-main-container {
