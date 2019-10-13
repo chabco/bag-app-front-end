@@ -26,6 +26,30 @@
 	padding: 25px 40px;
 	overflow: auto;
 }
+
+@media only screen and (min-width: 360px){
+	.app {
+		height: 100vh;
+		display: flex;
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.app-left {
+		width: 0%;
+		/* background-color: rgb(208, 130, 94); */
+		background: linear-gradient(rgb(208, 130, 94), rgb(179, 93, 54));
+		overflow: auto;
+		box-shadow: 10px 10px rgba(51, 51, 51, 0.418);
+	}
+	  
+	.app-right {
+		width: 100%;
+		/* background-color: #2E4158; */
+		background: linear-gradient(#2E4158, #111111);
+		padding: 25px 40px;
+		overflow: auto;
+	}
+}
   
 .toggle {
 	display: flex;
@@ -60,7 +84,27 @@
 	border-top-right-radius: 25px;
 	/* border-bottom-right-radius: 25px; */
 }
-  
+
+.hamburger,
+.collapsed {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: absolute;
+	bottom: 1em;
+	right: 1em;
+	border-radius: 50px;
+	height: 50px;
+	width: 50px;
+	background-color: pink;
+	box-shadow: #111111;
+}
+
+.hamburger-text {
+	color: black;
+	text-shadow: 2px 2px #8a8a8a;
+}
+
 .form-main-container {
 	margin-bottom: 100px;
 }

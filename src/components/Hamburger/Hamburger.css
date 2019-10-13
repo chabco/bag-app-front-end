@@ -1,0 +1,10 @@
+.hamburger-container {
+    z-index: 99px;
+}
+
+.menu {
+    position: absolute;
+    background-color: rgba(208, 130, 94, 0.781);
+    z-index: 0;
+    width: 78%;
+}

@@ -5,8 +5,8 @@ import LoginForm from '../Login/Login';
 import Home from '../Home/Home';
 import Grid from '../Grid/Grid';
 import Review from '../ReviewPage/ReviewPage';
+import Hamburger from '../Hamburger/Hamburger';
 import axios from 'axios';
-
 import './StartPage.css';
 
 class App extends Component {
@@ -84,6 +84,7 @@ class App extends Component {
 		return toggleItems;
 	}
 
+
 	render() {
 		console.log('hi');
 		console.log(this.state.loggedIn);
@@ -101,6 +102,10 @@ class App extends Component {
 
 			<div className="app-right">
 				{toggleItems}
+				
+				<Hamburger />
+
+
 				<Route exact path="/">
 					{this.state.loggedIn ? <Redirect to="/home" /> : <LoginForm handleSubmit={this.handleSubmit} history={this.props.history} />}
 				</Route>
