@@ -40,16 +40,17 @@ class Grid extends Component {
                 }}>
                     {/* <img className="grid-image" alt="" src={`${bag.image}`}/> */}
                 <div className="bags-content">
-                    <div className="bags-name">{bag.name}<div>{bag.volume_l} L</div></div>
+                    <div className="bags-name">{bag.name}<div>{bag.volume_l}L</div></div>
                 </div>
             </NavLink>
             </div>
         )
+        
         console.log(this)
         return ( 
             <div className="row">
                 <NavLink exact to="/home" className="about bags col s12 m6 l3">
-                    <div className="bags-content"><div className="home-name">Bagay.</div></div>
+                    <div className="bags-content"><div className="home-name">Welcome.</div></div>
                 </NavLink>
                 {allBags}
             </div>

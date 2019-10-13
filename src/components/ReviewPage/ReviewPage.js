@@ -45,11 +45,11 @@ class Review extends Component {
             return(<Spinner />)
         }
 
-        const oneBag = {...this.state.bagData}
+        const bag = {...this.state.bagData}
         // console.log(oneBag)
 
         // eslint-disable-next-line
-        const { id, name, $, height_cm, width_cm, depth_cm, height_in, width_in, depth_in, weight_kg, volume_l, expansion_l, laptop, opening, compartments, passport, waterbottle, organizer, shoe, hip_belt, sternum, water_resist, rainfly, compression_straps, molle, latch_points, backpack, shoulder, handles, hydration, frame, pass_through, material, notes, image } = oneBag;
+        const { id, name, $, height_cm, width_cm, depth_cm, height_in, width_in, depth_in, weight_kg, volume_l, expansion_l, laptop, opening, compartments, passport, waterbottle, organizer, shoe, hip_belt, sternum, water_resist, rainfly, compression_straps, molle, latch_points, backpack, shoulder, handles, hydration, frame, pass_through, material, notes, image } = bag;
 
         return(
             <div className="container">
