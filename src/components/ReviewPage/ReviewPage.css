@@ -1,6 +1,7 @@
 .container {
     width: 100%;
 }
+
 .review-content {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
 h1 {
     font-size: 7rem;
     font-family: 'Staatliches', cursive;
+    text-shadow: 10px 10px rgba(51, 51, 51, 0.418);
 }
 
 h2 {

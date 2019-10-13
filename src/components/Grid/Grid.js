@@ -32,7 +32,7 @@ class Grid extends Component {
 
     render() { 
         const allBags = this.state.bags.map((bag, i) => 
-        <div className="hover col s12 m6 l3">
+        <div className="hover col s12 m5 l3">
             <NavLink exact to={`/review/${bag.id}`} key={i} className="bags" style={{
                 backgroundImage: `url(${bag.image})`,
                 backgroundPosition: 'center',

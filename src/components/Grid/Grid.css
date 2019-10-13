@@ -7,7 +7,7 @@
 
 .bags {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-end;
     height: 16rem;
     background-color: #2E4158;
@@ -30,6 +30,7 @@
     font-size: 400%;
     margin: 5px;
     font-family: 'Staatliches', cursive;
+    padding: 20px;
 }
 
 .bags-content {
@@ -39,15 +40,17 @@
 }
 
 .hover {
-    z-index: 2;
+    z-index: 8;
+    border-radius: 50px 50px 0 50px;
 }
 
 .hover:hover {
-    background: linear-gradient(#e66465, #9198e5);
+	background: linear-gradient(#2E4158, #111111);
+    border-radius: 50px 50px 0 50px;
 }
 
 .about {
-    background-color: rgb(119, 228, 161);
+	background: linear-gradient(#2E4158, #111111);
     color: white;
 }
 
