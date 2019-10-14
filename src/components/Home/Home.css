@@ -1,0 +1,67 @@
+.accent {
+    color: rgb(208, 130, 94);
+}
+
+.smaller {
+    font-size: .8rem;
+}
+
+.intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    text-shadow: 10px 10px 10px rgba(32, 32, 32, 0.986);
+}
+
+.statement {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    text-shadow: 10px 10px 10px rgba(32, 32, 32, 0.986);
+}
+
+.linkedin-icon {
+    height: 15px;
+}
+
+.hello, .accordion {
+    padding-left: 18px;
+    font-size: 1.2rem;
+}
+
+.hello > p {
+    font-size: 14px;
+}
+
+/* Accordian stuff */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: rgba(238, 238, 238, 0);
+    color: rgb(208, 130, 94);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+:focus {
+    background-color: white !important;
+}
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active-accordian, .accordion:hover {
+    background-color: rgba(51, 51, 51, 0.384);
+    border-radius: 30px;
+}
+  
+  /* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255, 0);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

@@ -29,7 +29,12 @@ class Grid extends Component {
                 // backgroundSize: 'cover',
                 }}>
                 <div className="bags-content">
-                    <div className="bags-name">{bag.name}<div>{bag.volume_l}L</div></div>
+                    <div className="bags-name">
+                        {bag.name}
+                        <div className="bags-volume">
+                        {bag.volume_l}L
+                        </div>
+                    </div>
                 </div>
             </NavLink>
             </div>

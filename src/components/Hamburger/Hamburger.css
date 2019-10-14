@@ -1,29 +1,63 @@
-.hamburger-container {
-    z-index: 99px;
+.hamburger {
+    /* background-color: rgb(208, 130, 94) !important; */
+    border: none;
+    z-index: 2;
+    padding: 0;
+    background-color:rgb(208, 130, 94);
+    animation: background-color-pulsate 10s infinite;
 }
 
-.hamburger {
-    background-color: rgb(208, 130, 94) !important;
-    border: none;
-}
 
 .hamburger-text {
     color: white !important;
     font-size: 2rem;
 }
 
+.hamburger-icon {
+    height: 35px;
+    width: 35px;
+    
+}
+
+@keyframes background-color-pulsate {
+    0%   { background-color: rgb(208, 130, 94); }
+    50% { background-color: rgb(255, 255, 255); }
+    100%   { background-color: rgb(208, 130, 94); }
+}
+
+
+.hamburger, .hamburger-container
+.collapsed {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: absolute;
+	top: 1em;
+	right: 1em;
+	border-radius: 50px;
+	height: 60px;
+	width: 60px;
+    box-shadow: 10px 10px 10px rgba(32, 32, 32, 0.986);
+}
+
+.hamburger-text {
+	color: black;
+	text-shadow: 2px 2px #8a8a8a;
+}
+
 .menu {
     position: absolute;
     background: linear-gradient(rgb(208, 130, 94), rgb(179, 93, 54));
-    z-index: 0;
+    z-index: 1;
     width: 78%;
     height: 100vh;
     overflow: auto;
     padding: 10px;
     border-radius: 35px 35px;
+    box-shadow: 10px 10px 10px rgba(32, 32, 32, 0.986);
 }
 
-@media only screen and (min-width: 414px){
+@media only screen and (min-width: 424px){
     .hamburger-container, .hamburger {
         display: none;
     }

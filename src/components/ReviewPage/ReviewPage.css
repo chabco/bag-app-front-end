@@ -9,6 +9,15 @@
     width: 100%;
 }
 
+.review-content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.review-content-left, .review-content-right {
+    width: 100%;
+}
+
 h1 {
     font-size: 7rem;
     font-family: 'Staatliches', cursive;
@@ -17,6 +26,7 @@ h1 {
 
 h2 {
     font-size: 1.7rem;
+    font-family: 'Staatliches', cursive;
 }
 
 h3 {
@@ -24,9 +34,21 @@ h3 {
     font-family: 'Staatliches', cursive;
 }
 
-@media only screen and (min-width: 360px){
+.bigger {
+    font-size: 1.25rem;
+}
+
+.more-bigger {
+    font-size: 1.8rem;
+}
+
+.even-bigger {
+    font-size: 3rem;
+}
+
+@media only screen and (min-width: 375px){
     h1 {
-        font-size: 5rem;
+        font-size: 5.5rem;
         font-family: 'Staatliches', cursive;
         text-shadow: 10px 10px rgba(51, 51, 51, 0.418);
     }

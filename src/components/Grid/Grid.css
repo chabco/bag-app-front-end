@@ -13,7 +13,7 @@
     box-shadow: 10px 10px rgba(51, 51, 51, 0.418);
     color: white;
     /* border-radius: 90px 90px 90px 90px; */
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .bags:hover {
@@ -22,8 +22,18 @@
 
 .bags-name {
     font-size: 130%;
-    margin: 5px;
+    /* margin: 5px; */
     text-shadow: 5px 5px 5px rgba(20, 20, 20, 0.418);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.bags-volume {
+    font-family: 'Staatliches', cursive;
+    font-size: 2rem;
+    position: relative;
+    text-align: right;
+    width: 100%;
 }
 
 .home-name {
@@ -38,6 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .about {
