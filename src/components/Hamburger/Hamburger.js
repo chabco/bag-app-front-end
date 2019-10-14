@@ -26,7 +26,7 @@ class Hamburger extends Component {
         return ( 
             <div className="hamburger-container">
                 <button className="hamburger" onClick={this.burgerBagsShow}>
-                    <span className="hamburger-text">BAGS</span>
+                    <span className="hamburger-text">+</span>
                 </button>
                 {
                     this.state.showMenu

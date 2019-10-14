@@ -10,7 +10,7 @@ class Home extends Component {
             <div>
                 
                 <h1>Bagay.</h1>
-                <h2>Do you love to travel? Do you love organization? Do you want to make your commute easier?</h2>
+                <h2>Do you love to travel? <br/> Do you love organization? <br/>Do you constantly seek to improve your commute?</h2>
 
                 <h2>Your bag matters.</h2>
                 <hr/>
@@ -25,8 +25,10 @@ class Home extends Component {
                 <p>Sort functionality</p>
                 <p>Search functionality</p>
                 <p>Expand database</p>
-                <p>User feedback</p>
-                
+                <p>Rating system</p>
+
+                <hr/>
+                <p>No copyright infringement intended.</p>
             </div>
 
         );

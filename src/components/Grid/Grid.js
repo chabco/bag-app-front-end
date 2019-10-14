@@ -10,8 +10,6 @@ class Grid extends Component {
     }
 
     componentDidMount = () => {
-        // const bagId = this.props.match.params.bagId
-        // console.log(bagId)
         const allBags = axios.get(`${window.apiUrl}/bags/`)
 		allBags.then((resp) => {
 			const bags = resp.data;
@@ -22,14 +20,6 @@ class Grid extends Component {
 		})
     }
 
-    // componentDidUpdate = () => {
-    //     this.setState({
-    //         bags: resp.data
-    //     })
-    // }
-
-
-
     render() { 
         const allBags = this.state.bags.map((bag, i) => 
         <div className="hover col s12 m5 l3">
@@ -38,7 +28,6 @@ class Grid extends Component {
                 backgroundPosition: 'center',
                 // backgroundSize: 'cover',
                 }}>
-                    {/* <img className="grid-image" alt="" src={`${bag.image}`}/> */}
                 <div className="bags-content">
                     <div className="bags-name">{bag.name}<div>{bag.volume_l}L</div></div>
                 </div>

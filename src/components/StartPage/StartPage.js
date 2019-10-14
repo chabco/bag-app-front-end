@@ -92,12 +92,7 @@ class App extends Component {
 		return (
 			<Router>
 			<div className="app-left">
-
-			{/* <ul>
-				{this.state.users.map(aUser => <li key={aUser.id}>{aUser.username}</li>)}
-			</ul> */}
 				<Grid />
-
 			</div>
 
 			<div className="app-right">

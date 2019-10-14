@@ -2,9 +2,29 @@
     z-index: 99px;
 }
 
+.hamburger {
+    background-color: rgb(208, 130, 94) !important;
+    border: none;
+}
+
+.hamburger-text {
+    color: white !important;
+    font-size: 2rem;
+}
+
 .menu {
     position: absolute;
-    background-color: rgba(208, 130, 94, 0.781);
+    background: linear-gradient(rgb(208, 130, 94), rgb(179, 93, 54));
     z-index: 0;
     width: 78%;
+    height: 100vh;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 35px 35px;
+}
+
+@media only screen and (min-width: 414px){
+    .hamburger-container, .hamburger {
+        display: none;
+    }
 }
